@@ -1,0 +1,2294 @@
+{
+  "redirects": [
+    {
+      "source": "/:cityState([a-z0-9-]+-[a-z]{2})-carpentry",
+      "destination": "/:cityState-carpenter",
+      "permanent": true
+    },
+    {
+      "source": "/:cityState([a-z0-9-]+-[a-z]{2})-electrical",
+      "destination": "/:cityState-electrician",
+      "permanent": true
+    },
+    {
+      "source": "/:cityState([a-z0-9-]+-[a-z]{2})-emergency-electrical",
+      "destination": "/:cityState-emergency-electrician",
+      "permanent": true
+    },
+    {
+      "source": "/:cityState([a-z0-9-]+-[a-z]{2})-general-repairs",
+      "destination": "/:cityState-handyman",
+      "permanent": true
+    },
+    {
+      "source": "/:cityState([a-z0-9-]+-[a-z]{2})-plumbing",
+      "destination": "/:cityState-plumber",
+      "permanent": true
+    },
+    {
+      "source": "/:cityState([a-z0-9-]+-[a-z]{2})-preventative-maintenance",
+      "destination": "/:cityState-property-maintenance",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:cityState([a-z0-9-]+-[a-z]{2})-seasonal-checklist-plumbing",
+      "destination": "/blog/:cityState-seasonal-checklist-plumber",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:cityState([a-z0-9-]+-[a-z]{2})-when-to-call-pro-electrical",
+      "destination": "/blog/:cityState-when-to-call-pro-electrician",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:cityState([a-z0-9-]+-[a-z]{2})-permits-and-code-carpentry",
+      "destination": "/blog/:cityState-permits-and-code-carpenter",
+      "permanent": true
+    },
+    {
+      "source": "/comfort-club",
+      "destination": "/services",
+      "statusCode": 308
+    },
+    {
+      "source": "/comfort-club/",
+      "destination": "/services",
+      "statusCode": 308
+    },
+    {
+      "source": "/property-maintenance-toronto",
+      "destination": "/toronto-on-maintenance-services",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-toronto-ontario",
+      "destination": "/toronto-on-maintenance-services",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-new-york-city",
+      "destination": "/locations/new-york/new-york-city",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-nyc",
+      "destination": "/locations/new-york/new-york-city",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-miami",
+      "destination": "/miami-fl-maintenance-services",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-houston",
+      "destination": "/houston-tx-maintenance-services",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-dallas",
+      "destination": "/dallas-tx-maintenance-services",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-austin",
+      "destination": "/austin-tx-maintenance-services",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-los-angeles",
+      "destination": "/los-angeles-ca-maintenance-services",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-chicago",
+      "destination": "/chicago-il-maintenance-services",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-atlanta",
+      "destination": "/locations/georgia/atlanta",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-charlotte",
+      "destination": "/locations/north-carolina/charlotte",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-phoenix",
+      "destination": "/locations/arizona/phoenix",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-denver",
+      "destination": "/locations/colorado/denver",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-newark",
+      "destination": "/locations/new-jersey/newark",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-montreal",
+      "destination": "/locations/quebec/montreal",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-vancouver",
+      "destination": "/locations/british-columbia/vancouver",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-maintenance-calgary",
+      "destination": "/locations/alberta/calgary",
+      "statusCode": 301
+    },
+    {
+      "source": "/emergency-plumber",
+      "destination": "/emergency/plumbing",
+      "statusCode": 301
+    },
+    {
+      "source": "/emergency-electrician",
+      "destination": "/emergency/electrical",
+      "statusCode": 301
+    },
+    {
+      "source": "/emergency-hvac",
+      "destination": "/emergency/hvac",
+      "statusCode": 301
+    },
+    {
+      "source": "/24-hour-plumber",
+      "destination": "/emergency/plumbing",
+      "statusCode": 301
+    },
+    {
+      "source": "/no-heat",
+      "destination": "/emergency/no-heat",
+      "statusCode": 301
+    },
+    {
+      "source": "/no-cooling",
+      "destination": "/emergency/no-cooling",
+      "statusCode": 301
+    },
+    {
+      "source": "/burst-pipe",
+      "destination": "/emergency/burst-pipes",
+      "statusCode": 301
+    },
+    {
+      "source": "/water-damage",
+      "destination": "/emergency/water-damage",
+      "statusCode": 301
+    },
+    {
+      "source": "/plumbing-services",
+      "destination": "/services/plumbing",
+      "statusCode": 301
+    },
+    {
+      "source": "/electrical-services",
+      "destination": "/services/electrical",
+      "statusCode": 301
+    },
+    {
+      "source": "/hvac-services",
+      "destination": "/services/hvac",
+      "statusCode": 301
+    },
+    {
+      "source": "/commercial-property-maintenance",
+      "destination": "/industries/commercial-property-owners",
+      "statusCode": 301
+    },
+    {
+      "source": "/multi-family-maintenance",
+      "destination": "/industries/multi-family-buildings",
+      "statusCode": 301
+    },
+    {
+      "source": "/landlord-maintenance",
+      "destination": "/industries/landlords",
+      "statusCode": 301
+    },
+    {
+      "source": "/property-manager-maintenance",
+      "destination": "/industries/property-managers",
+      "statusCode": 301
+    },
+    {
+      "source": "/locations/ontario/toronto",
+      "destination": "/toronto-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/toronto",
+      "destination": "/toronto-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/mississauga",
+      "destination": "/mississauga-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/mississauga",
+      "destination": "/mississauga-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/brampton",
+      "destination": "/brampton-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/brampton",
+      "destination": "/brampton-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/vaughan",
+      "destination": "/vaughan-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/vaughan",
+      "destination": "/vaughan-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/markham",
+      "destination": "/markham-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/markham",
+      "destination": "/markham-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/hamilton",
+      "destination": "/hamilton-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/hamilton",
+      "destination": "/hamilton-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/ottawa",
+      "destination": "/ottawa-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ottawa",
+      "destination": "/ottawa-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/london",
+      "destination": "/london-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/london",
+      "destination": "/london-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/kitchener",
+      "destination": "/kitchener-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kitchener",
+      "destination": "/kitchener-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/waterloo",
+      "destination": "/waterloo-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/waterloo",
+      "destination": "/waterloo-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/burlington",
+      "destination": "/burlington-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/burlington",
+      "destination": "/burlington-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/oakville",
+      "destination": "/oakville-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/oakville",
+      "destination": "/oakville-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/miami",
+      "destination": "/miami-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/miami",
+      "destination": "/miami-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/tampa",
+      "destination": "/tampa-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/tampa",
+      "destination": "/tampa-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/orlando",
+      "destination": "/orlando-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/orlando",
+      "destination": "/orlando-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/jacksonville",
+      "destination": "/jacksonville-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/jacksonville",
+      "destination": "/jacksonville-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/houston",
+      "destination": "/houston-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/houston",
+      "destination": "/houston-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/dallas",
+      "destination": "/dallas-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/dallas",
+      "destination": "/dallas-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/austin",
+      "destination": "/austin-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/austin",
+      "destination": "/austin-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/san-antonio",
+      "destination": "/san-antonio-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/san-antonio",
+      "destination": "/san-antonio-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/los-angeles",
+      "destination": "/los-angeles-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/los-angeles",
+      "destination": "/los-angeles-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/san-diego",
+      "destination": "/san-diego-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/san-diego",
+      "destination": "/san-diego-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/san-francisco",
+      "destination": "/san-francisco-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/san-francisco",
+      "destination": "/san-francisco-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/new-york",
+      "destination": "/new-york-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york",
+      "destination": "/new-york-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/illinois/chicago",
+      "destination": "/chicago-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/chicago",
+      "destination": "/chicago-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/windsor",
+      "destination": "/windsor-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/windsor",
+      "destination": "/windsor-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/richmond-hill",
+      "destination": "/richmond-hill-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/richmond-hill",
+      "destination": "/richmond-hill-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/greater-sudbury",
+      "destination": "/greater-sudbury-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/greater-sudbury",
+      "destination": "/greater-sudbury-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/oshawa",
+      "destination": "/oshawa-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/oshawa",
+      "destination": "/oshawa-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/barrie",
+      "destination": "/barrie-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/barrie",
+      "destination": "/barrie-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/st-catharines",
+      "destination": "/st-catharines-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/st-catharines",
+      "destination": "/st-catharines-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/cambridge",
+      "destination": "/cambridge-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/cambridge",
+      "destination": "/cambridge-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/kingston",
+      "destination": "/kingston-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/kingston",
+      "destination": "/kingston-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/whitby",
+      "destination": "/whitby-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/whitby",
+      "destination": "/whitby-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/guelph",
+      "destination": "/guelph-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/guelph",
+      "destination": "/guelph-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/ajax",
+      "destination": "/ajax-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ajax",
+      "destination": "/ajax-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/thunder-bay",
+      "destination": "/thunder-bay-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/thunder-bay",
+      "destination": "/thunder-bay-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/brantford",
+      "destination": "/brantford-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/brantford",
+      "destination": "/brantford-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/pickering",
+      "destination": "/pickering-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/pickering",
+      "destination": "/pickering-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/niagara-falls",
+      "destination": "/niagara-falls-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/niagara-falls",
+      "destination": "/niagara-falls-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/milton",
+      "destination": "/milton-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/milton",
+      "destination": "/milton-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/chatham-kent",
+      "destination": "/chatham-kent-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/chatham-kent",
+      "destination": "/chatham-kent-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/san-jose",
+      "destination": "/san-jose-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/san-jose",
+      "destination": "/san-jose-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/fresno",
+      "destination": "/fresno-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/fresno",
+      "destination": "/fresno-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/sacramento",
+      "destination": "/sacramento-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/sacramento",
+      "destination": "/sacramento-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/long-beach",
+      "destination": "/long-beach-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/long-beach",
+      "destination": "/long-beach-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/oakland",
+      "destination": "/oakland-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/oakland",
+      "destination": "/oakland-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/bakersfield",
+      "destination": "/bakersfield-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/bakersfield",
+      "destination": "/bakersfield-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/anaheim",
+      "destination": "/anaheim-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/anaheim",
+      "destination": "/anaheim-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/stockton",
+      "destination": "/stockton-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/stockton",
+      "destination": "/stockton-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/riverside",
+      "destination": "/riverside-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/riverside",
+      "destination": "/riverside-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/irvine",
+      "destination": "/irvine-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/irvine",
+      "destination": "/irvine-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/santa-ana",
+      "destination": "/santa-ana-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/santa-ana",
+      "destination": "/santa-ana-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/chula-vista",
+      "destination": "/chula-vista-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/chula-vista",
+      "destination": "/chula-vista-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/fremont",
+      "destination": "/fremont-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/fremont",
+      "destination": "/fremont-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/san-bernardino",
+      "destination": "/san-bernardino-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/san-bernardino",
+      "destination": "/san-bernardino-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/modesto",
+      "destination": "/modesto-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/modesto",
+      "destination": "/modesto-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/fontana",
+      "destination": "/fontana-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/fontana",
+      "destination": "/fontana-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/oxnard",
+      "destination": "/oxnard-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/oxnard",
+      "destination": "/oxnard-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/moreno-valley",
+      "destination": "/moreno-valley-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/moreno-valley",
+      "destination": "/moreno-valley-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/glendale",
+      "destination": "/glendale-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/glendale",
+      "destination": "/glendale-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/huntington-beach",
+      "destination": "/huntington-beach-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/huntington-beach",
+      "destination": "/huntington-beach-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/santa-clarita",
+      "destination": "/santa-clarita-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/santa-clarita",
+      "destination": "/santa-clarita-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/garden-grove",
+      "destination": "/garden-grove-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/garden-grove",
+      "destination": "/garden-grove-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/oceanside",
+      "destination": "/oceanside-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/oceanside",
+      "destination": "/oceanside-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/rancho-cucamonga",
+      "destination": "/rancho-cucamonga-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/rancho-cucamonga",
+      "destination": "/rancho-cucamonga-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/santa-rosa",
+      "destination": "/santa-rosa-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/santa-rosa",
+      "destination": "/santa-rosa-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/ontario",
+      "destination": "/ontario-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario-ca",
+      "destination": "/ontario-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/elk-grove",
+      "destination": "/elk-grove-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/elk-grove",
+      "destination": "/elk-grove-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/corona",
+      "destination": "/corona-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/corona",
+      "destination": "/corona-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/hayward",
+      "destination": "/hayward-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/hayward",
+      "destination": "/hayward-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/lancaster",
+      "destination": "/lancaster-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/lancaster",
+      "destination": "/lancaster-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/salinas",
+      "destination": "/salinas-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/salinas",
+      "destination": "/salinas-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/palmdale",
+      "destination": "/palmdale-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/palmdale",
+      "destination": "/palmdale-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/sunnyvale",
+      "destination": "/sunnyvale-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/sunnyvale",
+      "destination": "/sunnyvale-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/pomona",
+      "destination": "/pomona-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/pomona",
+      "destination": "/pomona-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/escondido",
+      "destination": "/escondido-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/escondido",
+      "destination": "/escondido-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/torrance",
+      "destination": "/torrance-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/torrance",
+      "destination": "/torrance-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/pasadena",
+      "destination": "/pasadena-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/pasadena",
+      "destination": "/pasadena-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/orange",
+      "destination": "/orange-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/orange",
+      "destination": "/orange-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/fullerton",
+      "destination": "/fullerton-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/fullerton",
+      "destination": "/fullerton-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/roseville",
+      "destination": "/roseville-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/roseville",
+      "destination": "/roseville-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/visalia",
+      "destination": "/visalia-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/visalia",
+      "destination": "/visalia-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/thousand-oaks",
+      "destination": "/thousand-oaks-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/thousand-oaks",
+      "destination": "/thousand-oaks-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/concord",
+      "destination": "/concord-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/concord",
+      "destination": "/concord-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/simi-valley",
+      "destination": "/simi-valley-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/simi-valley",
+      "destination": "/simi-valley-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/santa-clara",
+      "destination": "/santa-clara-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/santa-clara",
+      "destination": "/santa-clara-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/vallejo",
+      "destination": "/vallejo-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/vallejo",
+      "destination": "/vallejo-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/berkeley",
+      "destination": "/berkeley-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/berkeley",
+      "destination": "/berkeley-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/victorville",
+      "destination": "/victorville-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/victorville",
+      "destination": "/victorville-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/el-monte",
+      "destination": "/el-monte-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/el-monte",
+      "destination": "/el-monte-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/downey",
+      "destination": "/downey-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/downey",
+      "destination": "/downey-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/costa-mesa",
+      "destination": "/costa-mesa-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/costa-mesa",
+      "destination": "/costa-mesa-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/inglewood",
+      "destination": "/inglewood-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/inglewood",
+      "destination": "/inglewood-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/carlsbad",
+      "destination": "/carlsbad-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/carlsbad",
+      "destination": "/carlsbad-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/fairfield",
+      "destination": "/fairfield-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/fairfield",
+      "destination": "/fairfield-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/ventura",
+      "destination": "/ventura-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ventura",
+      "destination": "/ventura-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/temecula",
+      "destination": "/temecula-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/temecula",
+      "destination": "/temecula-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/antioch",
+      "destination": "/antioch-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/antioch",
+      "destination": "/antioch-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/murrieta",
+      "destination": "/murrieta-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/murrieta",
+      "destination": "/murrieta-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/west-covina",
+      "destination": "/west-covina-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/west-covina",
+      "destination": "/west-covina-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/richmond",
+      "destination": "/richmond-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/richmond",
+      "destination": "/richmond-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/norwalk",
+      "destination": "/norwalk-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/norwalk",
+      "destination": "/norwalk-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/daly-city",
+      "destination": "/daly-city-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/daly-city",
+      "destination": "/daly-city-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/burbank",
+      "destination": "/burbank-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/burbank",
+      "destination": "/burbank-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/santa-maria",
+      "destination": "/santa-maria-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/santa-maria",
+      "destination": "/santa-maria-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/el-cajon",
+      "destination": "/el-cajon-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/el-cajon",
+      "destination": "/el-cajon-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/san-mateo",
+      "destination": "/san-mateo-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/san-mateo",
+      "destination": "/san-mateo-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/rialto",
+      "destination": "/rialto-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/rialto",
+      "destination": "/rialto-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/clovis",
+      "destination": "/clovis-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/clovis",
+      "destination": "/clovis-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/compton",
+      "destination": "/compton-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/compton",
+      "destination": "/compton-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/jurupa-valley",
+      "destination": "/jurupa-valley-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/jurupa-valley",
+      "destination": "/jurupa-valley-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/vista",
+      "destination": "/vista-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/vista",
+      "destination": "/vista-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/south-gate",
+      "destination": "/south-gate-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/south-gate",
+      "destination": "/south-gate-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/mission-viejo",
+      "destination": "/mission-viejo-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/mission-viejo",
+      "destination": "/mission-viejo-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/vacaville",
+      "destination": "/vacaville-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/vacaville",
+      "destination": "/vacaville-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/carson",
+      "destination": "/carson-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/carson",
+      "destination": "/carson-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/hesperia",
+      "destination": "/hesperia-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/hesperia",
+      "destination": "/hesperia-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/fort-worth",
+      "destination": "/fort-worth-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/fort-worth",
+      "destination": "/fort-worth-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/el-paso",
+      "destination": "/el-paso-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/el-paso",
+      "destination": "/el-paso-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/arlington",
+      "destination": "/arlington-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/arlington",
+      "destination": "/arlington-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/corpus-christi",
+      "destination": "/corpus-christi-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/corpus-christi",
+      "destination": "/corpus-christi-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/plano",
+      "destination": "/plano-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/plano",
+      "destination": "/plano-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/laredo",
+      "destination": "/laredo-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/laredo",
+      "destination": "/laredo-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/lubbock",
+      "destination": "/lubbock-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/lubbock",
+      "destination": "/lubbock-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/garland",
+      "destination": "/garland-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/garland",
+      "destination": "/garland-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/irving",
+      "destination": "/irving-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/irving",
+      "destination": "/irving-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/amarillo",
+      "destination": "/amarillo-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/amarillo",
+      "destination": "/amarillo-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/grand-prairie",
+      "destination": "/grand-prairie-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/grand-prairie",
+      "destination": "/grand-prairie-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/brownsville",
+      "destination": "/brownsville-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/brownsville",
+      "destination": "/brownsville-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/pasadena",
+      "destination": "/pasadena-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/mckinney",
+      "destination": "/mckinney-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/mckinney",
+      "destination": "/mckinney-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/mesquite",
+      "destination": "/mesquite-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/mesquite",
+      "destination": "/mesquite-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/killeen",
+      "destination": "/killeen-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/killeen",
+      "destination": "/killeen-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/mcallen",
+      "destination": "/mcallen-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/mcallen",
+      "destination": "/mcallen-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/frisco",
+      "destination": "/frisco-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/frisco",
+      "destination": "/frisco-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/carrollton",
+      "destination": "/carrollton-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/carrollton",
+      "destination": "/carrollton-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/waco",
+      "destination": "/waco-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/waco",
+      "destination": "/waco-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/denton",
+      "destination": "/denton-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/denton",
+      "destination": "/denton-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/midland",
+      "destination": "/midland-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/midland",
+      "destination": "/midland-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/abilene",
+      "destination": "/abilene-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/abilene",
+      "destination": "/abilene-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/beaumont",
+      "destination": "/beaumont-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/beaumont",
+      "destination": "/beaumont-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/round-rock",
+      "destination": "/round-rock-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/round-rock",
+      "destination": "/round-rock-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/odessa",
+      "destination": "/odessa-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/odessa",
+      "destination": "/odessa-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/pearland",
+      "destination": "/pearland-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/pearland",
+      "destination": "/pearland-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/tyler",
+      "destination": "/tyler-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/tyler",
+      "destination": "/tyler-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/college-station",
+      "destination": "/college-station-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/college-station",
+      "destination": "/college-station-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/lewisville",
+      "destination": "/lewisville-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/lewisville",
+      "destination": "/lewisville-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/sugar-land",
+      "destination": "/sugar-land-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/sugar-land",
+      "destination": "/sugar-land-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/league-city",
+      "destination": "/league-city-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/league-city",
+      "destination": "/league-city-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/allen",
+      "destination": "/allen-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/allen",
+      "destination": "/allen-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/wichita-falls",
+      "destination": "/wichita-falls-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/wichita-falls",
+      "destination": "/wichita-falls-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/edinburg",
+      "destination": "/edinburg-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/edinburg",
+      "destination": "/edinburg-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/st--petersburg",
+      "destination": "/st--petersburg-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/st--petersburg",
+      "destination": "/st--petersburg-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/hialeah",
+      "destination": "/hialeah-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/hialeah",
+      "destination": "/hialeah-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/tallahassee",
+      "destination": "/tallahassee-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/tallahassee",
+      "destination": "/tallahassee-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/fort-lauderdale",
+      "destination": "/fort-lauderdale-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/fort-lauderdale",
+      "destination": "/fort-lauderdale-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/port-st--lucie",
+      "destination": "/port-st--lucie-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/port-st--lucie",
+      "destination": "/port-st--lucie-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/cape-coral",
+      "destination": "/cape-coral-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/cape-coral",
+      "destination": "/cape-coral-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/pembroke-pines",
+      "destination": "/pembroke-pines-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/pembroke-pines",
+      "destination": "/pembroke-pines-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/hollywood",
+      "destination": "/hollywood-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/hollywood",
+      "destination": "/hollywood-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/gainesville",
+      "destination": "/gainesville-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/gainesville",
+      "destination": "/gainesville-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/miramar",
+      "destination": "/miramar-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/miramar",
+      "destination": "/miramar-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/coral-springs",
+      "destination": "/coral-springs-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/coral-springs",
+      "destination": "/coral-springs-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/lehigh-acres",
+      "destination": "/lehigh-acres-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/lehigh-acres",
+      "destination": "/lehigh-acres-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/palm-bay",
+      "destination": "/palm-bay-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/palm-bay",
+      "destination": "/palm-bay-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/spring-hill",
+      "destination": "/spring-hill-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/spring-hill",
+      "destination": "/spring-hill-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/clearwater",
+      "destination": "/clearwater-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/clearwater",
+      "destination": "/clearwater-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/west-palm-beach",
+      "destination": "/west-palm-beach-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/west-palm-beach",
+      "destination": "/west-palm-beach-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/lakeland",
+      "destination": "/lakeland-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/lakeland",
+      "destination": "/lakeland-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/pompano-beach",
+      "destination": "/pompano-beach-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/pompano-beach",
+      "destination": "/pompano-beach-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/davie",
+      "destination": "/davie-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/davie",
+      "destination": "/davie-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/miami-gardens",
+      "destination": "/miami-gardens-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/miami-gardens",
+      "destination": "/miami-gardens-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/boca-raton",
+      "destination": "/boca-raton-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/boca-raton",
+      "destination": "/boca-raton-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/brandon",
+      "destination": "/brandon-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/brandon",
+      "destination": "/brandon-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/sunrise",
+      "destination": "/sunrise-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/sunrise",
+      "destination": "/sunrise-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/plantation",
+      "destination": "/plantation-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/plantation",
+      "destination": "/plantation-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/buffalo",
+      "destination": "/buffalo-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/buffalo",
+      "destination": "/buffalo-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/rochester",
+      "destination": "/rochester-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/rochester",
+      "destination": "/rochester-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/yonkers",
+      "destination": "/yonkers-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/yonkers",
+      "destination": "/yonkers-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/syracuse",
+      "destination": "/syracuse-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/syracuse",
+      "destination": "/syracuse-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/albany",
+      "destination": "/albany-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/albany",
+      "destination": "/albany-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/new-rochelle",
+      "destination": "/new-rochelle-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-rochelle",
+      "destination": "/new-rochelle-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/mount-vernon",
+      "destination": "/mount-vernon-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/mount-vernon",
+      "destination": "/mount-vernon-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/schenectady",
+      "destination": "/schenectady-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/schenectady",
+      "destination": "/schenectady-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/utica",
+      "destination": "/utica-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/utica",
+      "destination": "/utica-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/white-plains",
+      "destination": "/white-plains-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/white-plains",
+      "destination": "/white-plains-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/hempstead",
+      "destination": "/hempstead-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/hempstead",
+      "destination": "/hempstead-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/troy",
+      "destination": "/troy-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/troy",
+      "destination": "/troy-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/niagara-falls",
+      "destination": "/niagara-falls-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/binghamton",
+      "destination": "/binghamton-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/binghamton",
+      "destination": "/binghamton-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/illinois/aurora",
+      "destination": "/aurora-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/aurora",
+      "destination": "/aurora-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/illinois/naperville",
+      "destination": "/naperville-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/naperville",
+      "destination": "/naperville-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/illinois/joliet",
+      "destination": "/joliet-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/joliet",
+      "destination": "/joliet-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/illinois/rockford",
+      "destination": "/rockford-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/rockford",
+      "destination": "/rockford-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/illinois/springfield",
+      "destination": "/springfield-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/springfield",
+      "destination": "/springfield-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/illinois/elgin",
+      "destination": "/elgin-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/elgin",
+      "destination": "/elgin-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/illinois/peoria",
+      "destination": "/peoria-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/peoria",
+      "destination": "/peoria-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/illinois/champaign",
+      "destination": "/champaign-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/champaign",
+      "destination": "/champaign-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/illinois/waukegan",
+      "destination": "/waukegan-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/waukegan",
+      "destination": "/waukegan-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/illinois/cicero",
+      "destination": "/cicero-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/cicero",
+      "destination": "/cicero-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/illinois/bloomington",
+      "destination": "/bloomington-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/bloomington",
+      "destination": "/bloomington-il-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/:city/:service",
+      "destination": "/:city-on-:service",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/:city/:service",
+      "destination": "/:city-ca-:service",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/:city/:service",
+      "destination": "/:city-tx-:service",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/:city/:service",
+      "destination": "/:city-fl-:service",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/:city/:service",
+      "destination": "/:city-ny-:service",
+      "permanent": true
+    },
+    {
+      "source": "/locations/illinois/:city/:service",
+      "destination": "/:city-il-:service",
+      "permanent": true
+    },
+    {
+      "source": "/locations/ontario/:city",
+      "destination": "/:city-on-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/california/:city",
+      "destination": "/:city-ca-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/texas/:city",
+      "destination": "/:city-tx-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/florida/:city",
+      "destination": "/:city-fl-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/new-york/:city",
+      "destination": "/:city-ny-maintenance-services",
+      "permanent": true
+    },
+    {
+      "source": "/locations/illinois/:city",
+      "destination": "/:city-il-maintenance-services",
+      "permanent": true
+    }
+  ]
+}
