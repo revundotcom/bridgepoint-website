@@ -42,7 +42,7 @@ export async function fetchRolesLocal(): Promise<Role[]> {
   const baseUrl = process.env.NEXT_PUBLIC_PORTAL_BASE_URL || "https://portal.revun.com";
   const url = `${baseUrl}/api/v1/job-postings?client_name=Bridgepoint+Maintenance`;
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, { cache: "no-store" });
     if (!res.ok) {
       console.error("Failed to fetch roles", res.status);
       return [];
