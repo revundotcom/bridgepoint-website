@@ -201,7 +201,6 @@ export default async function CareersPage() {
               ))}
             </ul>
           </div>
-
           <div>
             <SectionHeading eyebrow="How to apply" title="One email or one call." />
             <p className="mt-4 text-base text-steel-500 leading-relaxed">
