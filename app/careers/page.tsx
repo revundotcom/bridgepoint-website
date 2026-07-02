@@ -201,6 +201,7 @@ export default async function CareersPage() {
               ))}
             </ul>
           </div>
+
           <div>
             <SectionHeading eyebrow="How to apply" title="One email or one call." />
             <p className="mt-4 text-base text-steel-500 leading-relaxed">
@@ -211,7 +212,7 @@ export default async function CareersPage() {
               >
                 {NAP.careersEmail}
               </a>
-            . or call{" "}
+              . or call{" "}
               <a
                 href={NAP.phoneTel}
                 className="font-semibold text-navy hover:text-cyan-700"
