@@ -211,7 +211,7 @@ export default async function CareersPage() {
               >
                 {NAP.careersEmail}
               </a>
-            . or call{" "}
+              . or call{" "}
               <a
                 href={NAP.phoneTel}
                 className="font-semibold text-navy hover:text-cyan-700"
