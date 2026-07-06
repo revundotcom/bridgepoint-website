@@ -21,6 +21,8 @@ import { CareersFilterProvider } from "./careers-filter-context";
 import JobFilterControls from "./job-filter-controls";
 import JobFilterList from "./job-filter-list";
 
+export const dynamic = "force-dynamic";
+
 const HIRE_PROCESS = [
   {
     n: "01",

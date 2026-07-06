@@ -7,13 +7,10 @@ import { getAllRoleSlugs, getRoleBySlug, type Role } from "@/lib/careers";
 import ApplyButton from "./ApplyButton";
 import { BRAND, NAP } from "@/lib/constants";
 
+export const dynamic = "force-dynamic";
+
 interface RouteParams {
   params: { slug: string };
-}
-
-export async function generateStaticParams() {
-  const slugs = await getAllRoleSlugs();
-  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: RouteParams): Promise<Metadata> {
