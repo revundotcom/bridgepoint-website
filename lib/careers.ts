@@ -107,6 +107,8 @@ export async function fetchRolesLocal(): Promise<Role[]> {
           // Prepend $ to numbers if not present
           compensation = compensation.replace(/(\d[\d,]*)/g, "$$$1");
         }
+
+        compensation = `${compensation} Annually`;
       }
 
       const isRemote = job.Work_Type == null || String(job.Work_Type).toLowerCase() === "remote";
