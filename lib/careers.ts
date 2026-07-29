@@ -19,6 +19,33 @@ export interface Role {
   htmlDescription?: string;
   workType: "remote" | "hybrid";
   category: string;
+  categories: string[];
+}
+
+export function parseCategories(raw: any): string[] {
+  if (!raw) return ["Other"];
+  if (Array.isArray(raw)) {
+    const cleaned = raw.map(s => String(s).trim()).filter(Boolean);
+    return cleaned.length > 0 ? cleaned : ["Other"];
+  }
+  if (typeof raw === "string") {
+    let str = raw.trim();
+    if (!str) return ["Other"];
+    if (str.startsWith("[") && str.endsWith("]")) {
+      try {
+        const parsed = JSON.parse(str);
+        if (Array.isArray(parsed)) {
+          const cleaned = parsed.map(s => String(s).trim()).filter(Boolean);
+          if (cleaned.length > 0) return cleaned;
+        }
+      } catch (e) {
+        // Fallthrough if invalid JSON
+      }
+    }
+    const split = str.split(",").map(s => s.trim()).filter(Boolean);
+    if (split.length > 0) return split;
+  }
+  return ["Other"];
 }
 
 interface ApiJob {
@@ -39,7 +66,7 @@ interface ApiJob {
 }
 
 export async function fetchRolesLocal(): Promise<Role[]> {
-  const baseUrl = process.env.NEXT_PUBLIC_PORTAL_BASE_URL || "https://portal.revun.com";
+  const baseUrl = process.env.NEXT_PUBLIC_PORTAL_BASE_URL || "https://phpstack-1217932-6516253.cloudwaysapps.com";
   const url = `${baseUrl}/api/v1/job-postings?client_name=Bridgepoint+Maintenance`;
   try {
     const res = await fetch(url, { cache: "no-store" });
@@ -123,6 +150,7 @@ export async function fetchRolesLocal(): Promise<Role[]> {
         ? `${locParts.join(", ")} · ${workTypeSuffix}`
         : workTypeSuffix;
 
+      const parsedCats = parseCategories(job.Role_Category);
       return {
         slug: job.slug,
         title: job.Posting_Title || "Untitled Role",
@@ -143,7 +171,8 @@ export async function fetchRolesLocal(): Promise<Role[]> {
         additionalInfo: null,
         htmlDescription: rawHtml,
         workType: isRemote ? "remote" : "hybrid",
-        category: job.Role_Category || "Other",
+        categories: parsedCats,
+        category: parsedCats.join(", "),
       };
     });
   } catch (error) {

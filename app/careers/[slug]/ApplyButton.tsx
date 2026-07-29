@@ -180,7 +180,7 @@ function ApplyModal({
     fd.append("source", "bridgepoint");
     fd.set("mobile", phone);
 
-    const baseUrl = process.env.NEXT_PUBLIC_PORTAL_BASE_URL || "https://portal.revun.com";
+    const baseUrl = process.env.NEXT_PUBLIC_PORTAL_BASE_URL || "https://phpstack-1217932-6516253.cloudwaysapps.com";
 
     try {
       const res = await fetch(`${baseUrl}/api/v1/job-postings/apply`, {
