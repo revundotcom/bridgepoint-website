@@ -1,7 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useMemo, ReactNode } from "react";
-import { Role, groupRolesByCountry } from "@/lib/careers";
+import { Role, groupRolesByCountry, parseCategories } from "@/lib/careers";
 
 type LocationHierarchyItem = {
   country: string;
@@ -96,8 +96,14 @@ export function CareersFilterProvider({ allRoles, children }: { allRoles: Role[]
   const categoriesWithCounts = useMemo(() => {
     const counts: Record<string, number> = {};
     allRoles.forEach(r => {
-      const cat = r?.category || "Other";
-      counts[cat] = (counts[cat] || 0) + 1;
+      const cats = r?.categories && r.categories.length > 0
+        ? r.categories
+        : parseCategories(r?.category);
+      
+      const uniqueForRole = new Set(cats);
+      uniqueForRole.forEach(cat => {
+        counts[cat] = (counts[cat] || 0) + 1;
+      });
     });
     return Object.entries(counts)
       .map(([name, count]) => ({ name, count }))
@@ -107,10 +113,15 @@ export function CareersFilterProvider({ allRoles, children }: { allRoles: Role[]
   const filteredRoles = useMemo(() => {
     return allRoles.filter(role => {
       const searchLower = search.toLowerCase();
+      const roleCats = role?.categories && role.categories.length > 0
+        ? role.categories
+        : parseCategories(role?.category);
+
       const matchesSearch = !search || 
         role?.title?.toLowerCase().includes(searchLower) ||
         (role?.summary && role.summary.toLowerCase().includes(searchLower)) ||
-        role?.category?.toLowerCase().includes(searchLower);
+        role?.category?.toLowerCase().includes(searchLower) ||
+        roleCats.some(c => c.toLowerCase().includes(searchLower));
       
       const matchesLocation = (() => {
         if (selectedCountries.length === 0 && selectedCities.length === 0) return true;
@@ -120,7 +131,7 @@ export function CareersFilterProvider({ allRoles, children }: { allRoles: Role[]
       })();
         
       const matchesCategory = selectedCategories.length === 0 || 
-        selectedCategories.includes(role?.category || "Other");
+        roleCats.some(cat => selectedCategories.includes(cat));
         
       return matchesSearch && matchesLocation && matchesCategory;
     });

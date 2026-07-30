@@ -7,6 +7,7 @@ import { ArrowRight, CheckCircle2, Loader2, X } from "lucide-react";
 interface Props {
   role: string;
   jobId: string;
+  locId?: string;
   workType: "remote" | "hybrid";
   className?: string;
   variant?: "primary" | "secondary";
@@ -15,6 +16,7 @@ interface Props {
 export default function ApplyButton({
   role,
   jobId,
+  locId,
   workType,
   className = "",
   variant = "primary",
@@ -43,6 +45,7 @@ export default function ApplyButton({
         <ApplyModal
           role={role}
           jobId={jobId}
+          locId={locId}
           workType={workType}
           onClose={() => setOpen(false)}
         />
@@ -54,11 +57,13 @@ export default function ApplyButton({
 function ApplyModal({
   role,
   jobId,
+  locId,
   workType,
   onClose,
 }: {
   role: string;
   jobId: string;
+  locId?: string;
   workType: "remote" | "hybrid";
   onClose: () => void;
 }) {
@@ -177,10 +182,13 @@ function ApplyModal({
 
     // Append hidden fields
     fd.append("job_id", jobId);
+    if (locId) {
+      fd.append("loc_id", locId);
+    }
     fd.append("source", "bridgepoint");
     fd.set("mobile", phone);
 
-    const baseUrl = process.env.NEXT_PUBLIC_PORTAL_BASE_URL || "https://portal.revun.com";
+    const baseUrl = process.env.NEXT_PUBLIC_PORTAL_BASE_URL || "https://phpstack-1217932-6516253.cloudwaysapps.com";
 
     try {
       const res = await fetch(`${baseUrl}/api/v1/job-postings/apply`, {

@@ -104,7 +104,7 @@ export default async function CareerRolePage({ params }: RouteParams) {
                 </div>
 
                 <div>
-                  <ApplyButton role={role.title} jobId={role.jobId} workType={role.workType} variant="primary" />
+                  <ApplyButton role={role.title} jobId={role.jobId} locId={role.locId || ""} workType={role.workType} variant="primary" />
                 </div>
               </div>
             </div>
@@ -203,7 +203,7 @@ export default async function CareerRolePage({ params }: RouteParams) {
 
               {/* Action row at bottom */}
               <div className="mt-12 flex flex-wrap gap-4 border-t border-steel-100 pt-10">
-                <ApplyButton role={role.title} jobId={role.jobId} workType={role.workType} variant="primary" />
+                <ApplyButton role={role.title} jobId={role.jobId} locId={role.locId || ""} workType={role.workType} variant="primary" />
                 <Link
                   href="/careers#positions"
                   className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-steel-200 bg-white px-6 py-3.5 text-sm font-bold text-navy transition-colors hover:border-steel-400 hover:bg-steel-50"
