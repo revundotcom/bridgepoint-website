@@ -3,11 +3,13 @@ export interface Role {
   title: string;
   department: string;
   type: string;
+  jobType?: string;
   city: string;
   province: string;
   country: string;
   locationDisplay: string;
   jobId: string;
+  locId?: string;
   postingStartDate: string;
   compensation: string;
   summary: string;
@@ -61,6 +63,7 @@ interface ApiJob {
   Industry?: string;
   Job_Type?: string;
   zoho_id?: string;
+  location_id?: string;
   Date_Opened?: string;
   Role_Category?: string;
 }
@@ -106,11 +109,14 @@ export async function fetchRolesLocal(): Promise<Role[]> {
       // Clean up messy Zoho HTML artifacts (non-breaking spaces, empty trailing br tags)
       rawHtml = rawHtml.replace(/&nbsp;/gi, " ");
 
+      // Strip empty paragraphs/spans containing only br or whitespace
+      rawHtml = rawHtml.replace(/<(p|div)[^>]*>\s*(?:<span[^>]*>)?\s*(?:<br\s*\/?>|\s)*\s*(?:<\/span>)?\s*<\/\1>/gi, "");
+
       // 1. Convert bold headings in single block
-      rawHtml = rawHtml.replace(/<(div|p)[^>]*>\s*(?:<b>|<strong>)([^<:]+):\s*(?:<\/b>|<\/strong>)(?:&nbsp;|\s|<br\s*\/?>)*<\/\1>/gi, "\n<h3>$2</h3>\n");
+      rawHtml = rawHtml.replace(/<(div|p)[^>]*>\s*(?:<span[^>]*>)?\s*(?:<b>|<strong>)([^<:]+):\s*(?:<\/b>|<\/strong>)(?:<\/span>)?(?:&nbsp;|\s|<br\s*\/?>)*<\/\1>/gi, "\n<h3>$2</h3>\n");
 
       // 2. Convert plain text headings in single block
-      rawHtml = rawHtml.replace(/<(div|p)[^>]*>\s*([^<:]+):\s*(?:&nbsp;|\s|<br\s*\/?>)*<\/\1>/gi, "\n<h3>$2</h3>\n");
+      rawHtml = rawHtml.replace(/<(div|p)[^>]*>\s*(?:<span[^>]*>)?\s*([^<:]+):\s*(?:<\/span>)?(?:&nbsp;|\s|<br\s*\/?>)*<\/\1>/gi, "\n<h3>$2</h3>\n");
 
       // 3. Format plain text lists (- item or • item) into HTML <ul><li>
       rawHtml = rawHtml.replace(/(?:<div[^>]*>|<p[^>]*>)\s*[-•]\s*(.*?)\s*(?:<br\s*\/?>)?\s*(?:<\/div>|<\/p>)/gi, "<li>$1</li>");
@@ -138,8 +144,8 @@ export async function fetchRolesLocal(): Promise<Role[]> {
         compensation = `${compensation} Annually`;
       }
 
-      const isRemote = job.Work_Type == null || String(job.Work_Type).toLowerCase() === "remote";
-      const workTypeSuffix = isRemote ? "Remote" : "Hybrid";
+      const isRemote = String(job.Job_Type || "").toLowerCase() === "remote";
+      const jobTypeSuffix = job.Job_Type || "Hybrid";
 
       const locParts = [];
       if (job.City) locParts.push(job.City);
@@ -147,20 +153,22 @@ export async function fetchRolesLocal(): Promise<Role[]> {
       if (job.Country) locParts.push(job.Country);
 
       const locationDisplay = locParts.length > 0
-        ? `${locParts.join(", ")} · ${workTypeSuffix}`
-        : workTypeSuffix;
+        ? `${locParts.join(", ")} · ${jobTypeSuffix}`
+        : jobTypeSuffix;
 
       const parsedCats = parseCategories(job.Role_Category);
       return {
         slug: job.slug,
         title: job.Posting_Title || "Untitled Role",
         department: job.Industry || "Careers",
-        type: job.Job_Type || "Full time",
+        type: job.Work_Type || "Full time",
+        jobType: job.Job_Type || "Hybrid",
         city: job.City || "",
         province: job.State || "",
         country: job.Country || "",
         locationDisplay,
         jobId: job.zoho_id || "",
+        locId: job.location_id || "",
         postingStartDate: job.Date_Opened ? job.Date_Opened.split("T")[0] : "",
         compensation,
         summary: "",
