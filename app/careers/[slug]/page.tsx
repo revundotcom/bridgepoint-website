@@ -153,10 +153,74 @@ export default async function CareerRolePage({ params }: RouteParams) {
             {/* Main Content Area */}
             <article className="min-w-0">
               {role.htmlDescription ? (
-                <div
-                  className="job-desc text-steel-700 leading-relaxed text-sm space-y-4 max-w-none"
-                  dangerouslySetInnerHTML={{ __html: role.htmlDescription }}
-                />
+                <>
+                  <style dangerouslySetInnerHTML={{
+                    __html: `
+                    .job-desc h3 {
+                      display: block;
+                      font-size: 1.125rem;
+                      font-weight: 800;
+                      color: #0F1E36;
+                      margin-top: 2rem;
+                      margin-bottom: 0.35rem;
+                      text-transform: uppercase;
+                      letter-spacing: 0.05em;
+                      border-bottom: 2px solid #00B4D8;
+                      padding-bottom: 0.25rem;
+                      width: fit-content;
+                    }
+                    .job-desc p {
+                      margin-top: 0.85rem !important;
+                      margin-bottom: 0.85rem !important;
+                      line-height: 1.75 !important;
+                      color: #334155;
+                    }
+                    .job-desc h3 + ul,
+                    .job-desc h3 + p,
+                    .job-desc h3 + div {
+                      margin-top: 0.35rem !important;
+                    }
+                    .job-desc b,
+                    .job-desc strong,
+                    .job-desc li h1,
+                    .job-desc li h2,
+                    .job-desc li h3,
+                    .job-desc li h4 {
+                      display: inline !important;
+                      font-weight: 700 !important;
+                      border-bottom: none !important;
+                      text-transform: none !important;
+                      padding: 0 !important;
+                      margin: 0 !important;
+                    }
+                    .job-desc ul {
+                      list-style-type: none !important;
+                      padding-left: 0 !important;
+                      margin-top: 0.5rem;
+                      margin-bottom: 1.5rem;
+                    }
+                    .job-desc ul > li {
+                      position: relative;
+                      padding-left: 1.25rem !important;
+                      margin-top: 0.5rem;
+                      margin-bottom: 0.5rem;
+                    }
+                    .job-desc ul > li::before {
+                      content: "";
+                      position: absolute;
+                      left: 0;
+                      top: 0.65rem;
+                      width: 0.375rem;
+                      height: 0.375rem;
+                      border-radius: 9999px;
+                      background-color: #00B4D8;
+                    }
+                  `}} />
+                  <div
+                    className="job-desc text-steel-700 leading-relaxed text-sm space-y-4 max-w-none"
+                    dangerouslySetInnerHTML={{ __html: role.htmlDescription }}
+                  />
+                </>
               ) : (
                 <div className="space-y-10">
                   {/* Summary */}
