@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, Briefcase, Mail, MapPin } from "lucide-react";
 
 import { getAllRoleSlugs, getRoleBySlug, type Role } from "@/lib/careers";
-import ApplyButton from "./ApplyButton";
+import ApplyButton, { StickyApplyButton } from "./ApplyButton";
 import { BRAND, NAP } from "@/lib/constants";
 
 export const dynamic = "force-dynamic";
@@ -280,6 +280,9 @@ export default async function CareerRolePage({ params }: RouteParams) {
           </div>
         </div>
       </section>
+
+      {/* Mobile Sticky Apply Button */}
+      <StickyApplyButton role={role.title} jobId={role.jobId} locId={role.locId || ""} workType={role.workType} />
     </main>
   );
 }

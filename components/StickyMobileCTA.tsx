@@ -3,11 +3,13 @@
 import Link from "next/link";
 import { Phone, Wrench } from "lucide-react";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { NAP } from "@/lib/constants";
 import { cn } from "@/lib/cn";
 
 export default function StickyMobileCTA() {
   const [visible, setVisible] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 320);
@@ -15,6 +17,10 @@ export default function StickyMobileCTA() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  // Hide on job detail pages (/careers/[slug])
+  const isJobDetailPage = pathname?.startsWith('/careers/') && pathname !== '/careers' && pathname !== '/careers/';
+  if (isJobDetailPage) return null;
 
   return (
     <div
