@@ -187,25 +187,44 @@ export async function fetchRolesLocal(): Promise<Role[]> {
         compensation = `${compensation} Annually`;
       }
 
-      const jobTypeLower = String(job.Job_Type || "").toLowerCase();
+      const jobTypeLower = String(job.Job_Type || "").toLowerCase().trim();
+      const workTypeLower = String(job.Work_Type || "").toLowerCase().trim();
       const isRemote = jobTypeLower.includes("remote") || jobTypeLower.includes("hybrid");
-      const jobTypeSuffix = job.Job_Type || "Hybrid";
+      const isContract = jobTypeLower.includes("contract");
 
+      // Employment Type: combine Work_Type (e.g. On-Call) and Job_Type if Job_Type is Contract
+      let employmentType = job.Work_Type || "Full time";
+      if (isContract) {
+        if (job.Work_Type && !workTypeLower.includes("contract")) {
+          employmentType = `${job.Work_Type} · ${job.Job_Type}`;
+        } else {
+          employmentType = job.Job_Type || "Contract";
+        }
+      }
+
+      // Location Display: only append workplace types (e.g. Hybrid, Field-Based, Remote), NOT employment types like Contract
       const locParts = [];
       if (job.City) locParts.push(job.City);
       if (job.State) locParts.push(job.State);
       if (job.Country) locParts.push(job.Country);
 
-      const locationDisplay = locParts.length > 0
-        ? `${locParts.join(", ")} · ${jobTypeSuffix}`
-        : jobTypeSuffix;
+      const jobTypeSuffix = !isContract && job.Job_Type ? job.Job_Type : "";
+
+      let locationDisplay = "";
+      if (locParts.length > 0) {
+        locationDisplay = jobTypeSuffix
+          ? `${locParts.join(", ")} · ${jobTypeSuffix}`
+          : locParts.join(", ");
+      } else {
+        locationDisplay = jobTypeSuffix || "Hybrid";
+      }
 
       const parsedCats = parseCategories(job.Role_Category);
       return {
         slug: job.slug,
         title: job.Posting_Title || "Untitled Role",
         department: job.Industry || "Careers",
-        type: job.Work_Type || "Full time",
+        type: employmentType,
         jobType: job.Job_Type || "Hybrid",
         city: job.City || "",
         province: job.State || "",
