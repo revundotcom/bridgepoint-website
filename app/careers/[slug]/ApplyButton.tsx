@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { ArrowRight, CheckCircle2, Loader2, X } from "lucide-react";
+import CityAutocomplete, { type ResolvedLocation } from "@/components/CityAutocomplete";
 
 interface Props {
   role: string;
@@ -79,6 +80,7 @@ function ApplyModal({
   const [num2, setNum2] = useState(0);
   const [businessType, setBusinessType] = useState("");
   const [hasVehicle, setHasVehicle] = useState("");
+  const [location, setLocation] = useState<ResolvedLocation | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -129,6 +131,10 @@ function ApplyModal({
     const phone = fd.get("phone") as string;
     if (!phone || !/^\+?[1-9]\d{1,14}$/.test(phone.replace(/[\s()+-]/g, ""))) {
       errors.phone = "Please enter a valid phone number (e.g. +1 416 555 0199)";
+    }
+
+    if (!location) {
+      errors.residential_location = "Please select your city or province from the list";
     }
 
     const resume = fd.get("resume") as File | null;
@@ -231,6 +237,16 @@ function ApplyModal({
     }
     fd.append("source", "bridgepoint");
     fd.set("mobile", phone);
+
+    if (location) {
+      fd.set("city", location.city);
+      fd.set("state", location.state);
+      fd.set("province", location.province);
+      fd.set("state_province", location.state_province);
+      fd.set("country", location.country);
+      fd.set("country_code", location.country_code);
+      fd.set("residential_location", location.residential_location);
+    }
 
     const baseUrl = process.env.NEXT_PUBLIC_PORTAL_BASE_URL || "https://phpstack-1217932-6516253.cloudwaysapps.com";
 
@@ -368,6 +384,22 @@ function ApplyModal({
                     {fieldErrors.phone && <p className="mt-1 text-xs text-red-500">{fieldErrors.phone}</p>}
                   </div>
                 </div>
+
+                <CityAutocomplete
+                  value={location}
+                  onChange={setLocation}
+                  error={fieldErrors.residential_location}
+                  onClearError={() => {
+                    if (fieldErrors.residential_location) {
+                      setFieldErrors((prev) => {
+                        const next = { ...prev };
+                        delete next.residential_location;
+                        return next;
+                      });
+                    }
+                  }}
+                  required
+                />
 
                 {workType === "remote" && (
                   <>
