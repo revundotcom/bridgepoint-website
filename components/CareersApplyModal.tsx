@@ -2,6 +2,7 @@
 
 import { useState, useEffect, FormEvent } from "react";
 import { X, CheckCircle2, Loader2 } from "lucide-react";
+import CityAutocomplete, { type ResolvedLocation } from "@/components/CityAutocomplete";
 
 interface Props {
   role: string;
@@ -11,6 +12,8 @@ interface Props {
 export default function CareersApplyModal({ role, onClose }: Props) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [location, setLocation] = useState<ResolvedLocation | null>(null);
+  const [locationError, setLocationError] = useState("");
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -24,8 +27,13 @@ export default function CareersApplyModal({ role, onClose }: Props) {
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (!location) {
+      setLocationError("Please select your city or province from the list");
+      return;
+    }
     setStatus("loading");
     setErrorMsg("");
+    setLocationError("");
     const fd = new FormData(e.currentTarget);
     const payload = {
       role,
@@ -33,6 +41,13 @@ export default function CareersApplyModal({ role, onClose }: Props) {
       lastName: fd.get("lastName"),
       email: fd.get("email"),
       phone: fd.get("phone"),
+      city: location.city,
+      state: location.state,
+      province: location.province,
+      state_province: location.state_province,
+      country: location.country,
+      country_code: location.country_code,
+      residential_location: location.residential_location,
       linkedin: fd.get("linkedin"),
       resumeUrl: fd.get("resumeUrl"),
       whyYou: fd.get("whyYou"),
@@ -108,6 +123,13 @@ export default function CareersApplyModal({ role, onClose }: Props) {
                 <input name="phone" type="tel" className="w-full rounded-lg border border-steel-200 bg-steel-50 px-3 py-2.5 text-sm text-navy focus:outline-none focus:ring-2 focus:ring-cyan-400" placeholder="+1 416 555 0100" />
               </div>
             </div>
+            <CityAutocomplete
+              value={location}
+              onChange={setLocation}
+              error={locationError}
+              onClearError={() => setLocationError("")}
+              required
+            />
             <div>
               <label className="block text-xs font-semibold text-steel-700 mb-1.5">LinkedIn Profile URL</label>
               <input name="linkedin" type="url" className="w-full rounded-lg border border-steel-200 bg-steel-50 px-3 py-2.5 text-sm text-navy focus:outline-none focus:ring-2 focus:ring-cyan-400" placeholder="https://linkedin.com/in/yourprofile" />
